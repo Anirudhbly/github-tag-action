@@ -43,6 +43,7 @@ echo "pre_release = $pre_release"
 
 # fetch tags
 git fetch --tags
+echo "hello1"
 
 # get latest tag that looks like a semver (with or without v)
 case "$tag_context" in

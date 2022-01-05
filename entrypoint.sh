@@ -111,12 +111,11 @@ then
     if [[ "$pre_tag" == *"$new"* ]]; then
         new=$(semver -i prerelease $pre_tag --preid $suffix); part="pre-$part"
     else
-        new="$new$suffix.1"; part="pre-$part"
+        new="$new-$suffix.1"; part="pre-$part"
     fi
 fi
 
 echo $part
-echo hellooooo
 
 # did we get a new tag?
 if [ ! -z "$new" ]
@@ -141,8 +140,11 @@ else
 fi
 
 # set outputs
+echo hellooooo1
 echo ::set-output name=new_tag::$new
+echo hellooooo2
 echo ::set-output name=part::$part
+echo hellooooo3
 
 # use dry run to determine the next tag
 if $dryrun

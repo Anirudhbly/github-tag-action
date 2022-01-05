@@ -10,8 +10,8 @@ custom_tag=${CUSTOM_TAG}
 source=${SOURCE:-.}
 dryrun=${DRY_RUN:-false}
 initial_version=${INITIAL_VERSION:-16.2.27}
-tag_context=${TAG_CONTEXT:-repo}
-suffix=${PRERELEASE_SUFFIX:-}
+tag_context=${TAG_CONTEXT:-branch}
+suffix=${PRERELEASE_SUFFIX:}
 verbose=${VERBOSE:-true}
 
 cd ${source}
